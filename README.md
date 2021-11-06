@@ -63,10 +63,6 @@ Some errors handling examples shown here:
 ---
 ![ship exist](assets/shipexist.png)
 
-* **Ship Already Exists**
----
-![ship exist](assets/shipexist.png)
-
 * **Missile Attack Overlap**
 ---
 ![attack error](assets/attackerr.png)
