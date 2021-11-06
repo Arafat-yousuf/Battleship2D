@@ -1,0 +1,74 @@
+Assuming all the connections between PCs are made successfully...
+
+STEP 1
+-----------------------------
+
+in MAIN PC run ---
+
+@"...\Site1\reset.sql"
+
+STEP 2
+-----------------------------
+
+in MAIN PC run ---
+
+@"...\Site1\createplayer.sql"
+
+set player name (e.g. jamy) who will get an id
+
+then in VIRTUAL PC run ---
+
+@"...\Site2\createplayer.sql"
+
+set player name (e.g. foisal) who will get an id
+
+STEP 3
+-----------------------------
+
+then in MAIN PC run ---
+
+@"...\Site1\startgame.sql"
+
+set Id of player 1 (jamy)
+
+then in VIRTUAL PC run ---
+
+@"...\Site2\startgame.sql"
+
+set Id of player 2 (foisal)
+
+startgame.sql will run createboard.sql, gamepack.sql, trigger.sql serially....
+
+STEP 4
+-----------------------------
+
+then in MAIN PC run ---
+
+@"...\Site1\ship.sql"
+
+show some ERROR HANDLING
+
+then in VIRTUAL PC run ---
+
+@"...\Site2\ship.sql"
+
+STEP 5
+-----------------------------
+
+then in MAIN PC run ---
+
+@"...\Site1\attack.sql"
+
+show some ERROR HANDLING as well
+
+then in VIRTUAL PC run ---
+
+@"...\Site2\attack.sql"
+
+STEP 6
+-----------------------------
+
+Game will be over after a player loses all of his ships.
+AFTER GAME OVER -----
+
+Begin from STEP 1 to start a match again.
